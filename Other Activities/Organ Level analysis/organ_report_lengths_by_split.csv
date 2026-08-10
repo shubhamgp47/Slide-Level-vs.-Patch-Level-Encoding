@@ -1,0 +1,33 @@
+split,Organ,n_reports,avg_words
+test,Breast,245,14.808163265306122
+test,Prostate,227,13.863436123348018
+test,Stomach,160,7.81875
+test,Urinary bladder,101,18.574257425742573
+test,Lung,93,5.612903225806452
+test,Colon,82,6.817073170731708
+test,Uterine cervix,70,10.585714285714285
+test,Rectum,24,6.416666666666667
+train,Breast,1507,15.144658261446583
+train,Prostate,1370,13.03868613138686
+train,Stomach,1153,7.917606244579358
+train,Urinary bladder,679,18.617083946980856
+train,Lung,678,5.3023598820058995
+train,Colon,568,6.758802816901408
+train,Uterine cervix,482,10.663900414937759
+train,Rectum,168,6.428571428571429
+train,Cervix,7,11.571428571428571
+train,Bladder,5,18.4
+train,Anus,2,6.0
+train,Nipple,2,6.5
+train,Invasive micropapillary carcinoma,1,3.0
+train,stomach,1,6.0
+val,Prostate,145,12.627586206896552
+val,Breast,141,15.574468085106384
+val,Stomach,139,7.841726618705036
+val,Lung,80,5.1375
+val,Urinary bladder,76,18.42105263157895
+val,Colon,70,6.7
+val,Uterine cervix,54,10.703703703703704
+val,Rectum,19,6.368421052631579
+val,Bladder,2,18.5
+val,Cervix,1,12.0
