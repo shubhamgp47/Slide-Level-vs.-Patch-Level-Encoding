@@ -70,7 +70,7 @@ This project systematically compares patch-level and slide-level encoding paradi
 
    For REGScore use the file [HistGen Testing](/Other%20Activities/REG2025%20Inference/reg_evaluator.py) with [reg2025-eval](/Conda%20Environments/reg2025-eval.yml) environmet for all the models.
 
-Sample job scripts are present in [Scripts](/Job%20Scripts/)
+Sample job scripts are present in [Scripts](/job_scripts/)
 
-All the results can be found in [Results](/Results/)
+All the results can be found in [Results](/results/)
 
