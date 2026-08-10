@@ -19,38 +19,30 @@ This project systematically compares patch-level and slide-level encoding paradi
 ![Mean performance of all models](Results/Grouped%20Dot%20Plots/all_models_overview_grouped_dot.png)
 *Mean performance of all models across four evaluation metrics. Each point shows the average BLEU-4, METEOR, ROUGE-L, and REG Score on the test set for HistGen (ViT-L), UNI, CONCH, UNI2, and TITAN, with vertical error bars indicating one standard deviation across five runs.*
 
-![Improvement over baseline](Results/Improvement%20Over%20Baseline/heatmap_improvement_over_baseline.png)
-
-
 ## Statistical Significance vs HistGen Baseline 
 
-**Legend**:Mean = Model mean - Baseline mean; CI = 95% bootstrap confidence interval
-(10,000 iterations); Cohen’s d interpretation: small (0.2-0.5), medium (0.5-0.8), large (>0.8);
-p-value from paired t-test at α = 0.05
+### Table 1: Statistical Analysis vs. HistGen Baseline
 
-| Model  | Metric   | Baseline Mean±SD | Model Mean±SD | Mean | 95% CI          | p-value | Cohen's d     |
-|--------|----------|------------------|---------------|------|-----------------|---------|---------------|
-| **UNI** | BLEU-1  | 0.709±0.029     | 0.721±0.032  | +0.012 | [-0.026, +0.051] | 0.629  | 0.23 (small) |
-|        | BLEU-2  | 0.672±0.029     | 0.683±0.032  | +0.011 | [-0.026, +0.050] | 0.651  | 0.22 (small) |
-|        | BLEU-3  | 0.640±0.029     | 0.650±0.030  | +0.009 | [-0.026, +0.047] | 0.677  | 0.20 (small) |
-|        | BLEU-4  | 0.614±0.028     | 0.622±0.029  | +0.008 | [-0.026, +0.042] | 0.711  | 0.18 (small) |
-|        | METEOR  | 0.443±0.016     | 0.450±0.020  | +0.007 | [-0.016, +0.030] | 0.625  | 0.24 (small) |
-|        | ROUGE-L | 0.684±0.028     | 0.694±0.022  | +0.010 | [-0.020, +0.040] | 0.616  | 0.24 (small) |
-|        | REGScore| 0.676±0.025     | 0.682±0.019  | +0.005 | [-0.020, +0.032] | 0.740  | 0.24 (small) |
-| **UNI2** | BLEU-1 | 0.709±0.029  | 0.740±0.028  | +0.031 | [-0.007, +0.065] | 0.201  | 0.68 (medium)|
-|        | BLEU-2  | 0.672±0.029     | 0.702±0.029  | +0.029 | [-0.011, +0.065] | 0.247  | 0.61 (medium)|
-|        | BLEU-3  | 0.640±0.029     | 0.668±0.030  | +0.027 | [-0.011, +0.064] | 0.286  | 0.55 (medium)|
-|        | BLEU-4  | 0.614±0.028     | 0.640±0.031  | +0.025 | [-0.015, +0.064] | 0.326  | 0.50 (medium)|
-|        | METEOR  | 0.443±0.016     | 0.464±0.020  | +0.020 | [-0.003, +0.042] | 0.201  | 0.68 (medium)|
-|        | ROUGE-L | 0.684±0.028     | 0.714±0.026  | +0.030 | [-0.007, +0.066] | 0.223  | 0.64 (medium)|
-|        | REGScore| 0.676±0.025    | 0.698±0.027  | +0.022 | [-0.010, +0.055] | 0.322  | 0.86 (large) |
-| **TITAN** | BLEU-1 | 0.709±0.029    | 0.739±0.043  | +0.030 | [-0.026, +0.072] | 0.347  | 0.48 (small) |
-|        | BLEU-2  | 0.672±0.029     | 0.703±0.041  | +0.031 | [-0.024, +0.071] | 0.347  | 0.50 (medium)|
-|        | BLEU-3  | 0.640±0.029     | 0.670±0.038  | +0.030 | [-0.021, +0.068] | 0.313  | 0.52 (medium)|
-|        | BLEU-4  | 0.614±0.028     | 0.643±0.034  | +0.029 | [-0.018, +0.064] | 0.304  | 0.53 (medium)|
-|        | METEOR  | 0.443±0.016     | 0.467±0.022  | +0.023 | [-0.006, +0.048] | 0.207  | 0.67 (medium)|
-|        | **ROUGE-L** | 0.684±0.028 | 0.760±0.025 | +0.076 | [+0.033, +0.108] | **0.027** | **1.53 (large)** |
-|        | **REGScore** | 0.676±0.025 | 0.742±0.023 | +0.066 | [+0.030, +0.095] | **0.025** | **2.81 (large)** |
+*Statistical analysis of models against HistGen baseline (differences computed as model − HistGen baseline). The 95% CI reports bootstrap confidence intervals for the difference in REG Score. Asterisks (\*) indicate statistically significant improvements over HistGen. **Bold** values denote large effect sizes (Cohen's d > 0.8) relative to HistGen.*
+
+| Model | BLEU-4 (Mean±SD) | METEOR (Mean±SD) | ROUGE-L (Mean±SD) | REG Score (Mean±SD) | 95% CI (REG Score diff.) |
+|-------|------------------|-------------------|---------------------|-----------------------|----------------------------|
+| HistGen | 0.614±0.028 | 0.443±0.016 | 0.684±0.028 | 0.676±0.025 | — |
+| UNI | 0.622±0.029 | 0.450±0.020 | 0.694±0.022 | 0.682±0.019 | [-0.019, 0.029] |
+| CONCH | 0.624±0.020 | 0.454±0.014 | 0.699±0.020 | 0.691±0.018 | [-0.023, 0.041] |
+| UNI2 | 0.640±0.031 | 0.464±0.020 | 0.714±0.026 | **0.698±0.027** | [-0.013, 0.055] |
+| TITAN | 0.643±0.034 | 0.467±0.022 | **0.760±0.025**\* | **0.742±0.023**\* | [0.029, 0.098] |
+
+### Table 2: Statistical Analysis of Patch-Level Models vs. TITAN
+
+*Statistical analysis of patch-level models against TITAN (differences computed as TITAN − model). The 95% CI column reports bootstrap confidence intervals for the difference in REG Score. Positive intervals therefore indicate that the corresponding patch-level model underperforms TITAN. Asterisks (\*) indicate statistically significant differences from TITAN according to paired t-tests. **Bold** values denote large effect sizes (Cohen's d > 0.8) relative to TITAN.*
+
+| Model | BLEU-4 (Mean±SD) | METEOR (Mean±SD) | ROUGE-L (Mean±SD) | REG Score (Mean±SD) | 95% CI (REG Score diff.) |
+|-------|------------------|-------------------|---------------------|-----------------------|----------------------------|
+| TITAN | 0.643±0.034 | 0.467±0.022 | 0.760±0.025 | 0.742±0.023 | — |
+| UNI | 0.622±0.029 | 0.450±0.020 | **0.694±0.022**\* | **0.682±0.019**\* | [0.048, 0.071] |
+| CONCH | 0.624±0.020 | 0.454±0.014 | **0.699±0.020**\* | **0.691±0.018**\* | [0.034, 0.069] |
+| UNI2 | 0.640±0.031 | 0.464±0.020 | **0.714±0.026** | **0.698±0.027** | [0.014, 0.070] |
 
 
 ## Usage
