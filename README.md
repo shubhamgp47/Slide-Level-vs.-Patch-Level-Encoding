@@ -44,6 +44,10 @@ This project systematically compares patch-level and slide-level encoding paradi
 | CONCH | 0.624±0.020 | 0.454±0.014 | **0.699±0.020**\* | **0.691±0.018**\* | [0.034, 0.069] |
 | UNI2 | 0.640±0.031 | 0.464±0.020 | **0.714±0.026** | **0.698±0.027** | [0.014, 0.070] |
 
+### Anatomical-Level Performance
+![Anatomical-level REG Score](other_activities/anatomical_level_work/organ_level_metrics/metrics_plots/reg_grouped_bars.png)
+*Anatomical-level REG Score for all models. Bars show mean REG Score on the test set for HistGen (ViT-L), UNI, CONCH, UNI2, and TITAN, computed overall and separately for each organ. TITAN consistently outperforms other models on the more difficult organs (colon, rectum, lung, stomach), while all models perform similarly on organs with larger, longer-report datasets (breast, prostate).*
+
 
 ## Usage
 1. Preprocessing
