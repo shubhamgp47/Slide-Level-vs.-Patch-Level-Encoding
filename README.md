@@ -18,7 +18,7 @@ This project systematically compares patch-level and slide-level encoding paradi
 
 ![Mean performance of all models ](Results/Grouped%20Dot%20Plots/all_models_overview_grouped_dot.png)
 
-![Improvement over baseline](Results/Improvement%20Heatmap/heatmap_improvement_over_baseline.png)
+![Improvement over baseline](Results/Improvement%20Over%20Baseline/heatmap_improvement_over_baseline.png)
 
 
 ## Statistical Significance vs HistGen Baseline 
