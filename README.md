@@ -66,7 +66,7 @@ This project systematically compares patch-level and slide-level encoding paradi
 
 4. Inference
 
-   For BLUE, METEOR, ROUGE-L, use the files [HistGen Testing](/HistGen/test_wsi_report_seed4x.sh), [UNI Testing](/HistGen/test_wsi_report_UNI1_seed4x.sh), [UNI2 Testing](/HistGen/test_wsi_report_UNI2_1_seed4x.sh) and [CONCH Testing] (HistGen/test_wsi_report_conch_seed4x.sh) with [histgen](/Conda%20Environments/histgen.yml) environment. For TITAN use [TITAN Testing](/HistGen4TITAN/test_wsi_report_5_seed4x.sh) with [histgen_titan](/Conda%20Environments/histgen_titan.yml) environment.
+   For BLUE, METEOR, ROUGE-L, use the files [HistGen Testing](/HistGen/test_wsi_report_seed4x.sh), [UNI Testing](/HistGen/test_wsi_report_UNI1_seed4x.sh), [UNI2 Testing](/HistGen/test_wsi_report_UNI2_1_seed4x.sh) and [CONCH Testing](HistGen/test_wsi_report_conch_seed4x.sh) with [histgen](/Conda%20Environments/histgen.yml) environment. For TITAN use [TITAN Testing](/HistGen4TITAN/test_wsi_report_5_seed4x.sh) with [histgen_titan](/Conda%20Environments/histgen_titan.yml) environment.
 
    For REGScore use the file [HistGen Testing](/Other%20Activities/REG2025%20Inference/reg_evaluator.py) with [reg2025-eval](/Conda%20Environments/reg2025-eval.yml) environmet for all the models.
 
