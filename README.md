@@ -60,7 +60,7 @@ This project systematically compares patch-level and slide-level encoding paradi
 
 2. Training
    
-   To train Histgen baseline and other patch level encoder variants (UNI and UNI2) use the files [HistGen Training](/HistGen/train_wsi_reportseed4x.sh), [UNI Training](/HistGen/train_wsi_report_uni1_seed4x.sh), and [UNI2 Training](/HistGen/train_wsi_report_uni2_seed4x.sh) respectively using the [histgen](/Conda%20Environments/histgen.yml) environment.
+   To train Histgen baseline and other patch level encoder variants (UNI, UNI2 and CONCH) use the files [HistGen Training](/HistGen/train_wsi_reportseed4x.sh), [UNI Training](/HistGen/train_wsi_report_uni1_seed4x.sh), [UNI2 Training](/HistGen/train_wsi_report_uni2_seed4x.sh) and [CONCH]((/HistGen/train_wsi_report_conch_histgen_seed42.sh)) respectively using the [histgen](/Conda%20Environments/histgen.yml) environment.
 
    To train TITAN, use [TITAN Training](/HistGen4TITAN/train_wsi_report_TITAN.sh) using [histgen_titan](/Conda%20Environments/histgen_titan.yml) environment.
 
