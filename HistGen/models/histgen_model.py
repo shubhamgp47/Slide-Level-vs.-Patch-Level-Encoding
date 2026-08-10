@@ -2,7 +2,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 from modules.visual_extractor import VisualExtractor
-from modules.histgen_module import BaseHistGen
+from modules.histgen_module import BaseHistGen 
 
 class HistGenModel(nn.Module):
     #Original code
@@ -35,6 +35,8 @@ class HistGenModel(nn.Module):
 
             #This is run3 condition, same for run4 and run1 too, other params are controlled from calling script
             self.wsi_mapping = torch.nn.Linear(1536, self.args.d_vf)
+        elif "CONCH" in args.image_dir:
+            self.wsi_mapping = torch.nn.Linear(768, self.args.d_vf)
         else:  # DINOv2, UNI1, and other 1024-dim models
             self.wsi_mapping = torch.nn.Linear(1024, self.args.d_vf)
             
