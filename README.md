@@ -11,17 +11,12 @@ This project systematically compares patch-level and slide-level encoding paradi
 3. **Scale helps at the patch level too**: Increasing both model capacity and pretraining corpus size (UNI2 vs. UNI) improves patch-level performance, suggesting encoder scaling is beneficial even within the patch-aggregation paradigm.
 
 
-<img width="729" height="909" alt="Flowchart (1)" src="https://github.com/user-attachments/assets/4a00c638-7b81-474d-a771-9453dde72c2d" />
+
 
 ## Results
-| Configuration | Feature Extractor | Encoder | REG Score | BLEU-4 | ROUGE-L |
-|---------------|-------------------|---------|-----------|--------|---------|
-| **HistGen** (baseline) | HistGen DINOv2 ViT-L | **HistGen Encoder** | **0.676** | 0.614 | 0.684 |
-| UNI1 | UNI | **HistGen Encoder** | 0.682 | 0.622 | 0.694 |
-| UNI2 | UNI2 | **HistGen Encoder** | **0.698** | 0.640 | 0.714 |
-| **TITAN** (best) | CONCH | **Frozen TITAN** | **0.742** | **0.643** | **0.760** |
 
-![Model Evaluation](Results/Model%20Evaluation/all_models_overview.png)
+
+![Mean performance of all models ](Results/Grouped%20Dot%20Plots/all_models_overview_grouped_dot.png)
 
 ![Improvement over baseline](Results/Improvement%20Heatmap/heatmap_improvement_over_baseline.png)
 
