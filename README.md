@@ -1,22 +1,13 @@
-# Vision-Language Models for Pathology Report Generation from Gigapixel Whole-Slide Images![F1](https://github.com/user-attachments/assets/b7155d30-f7a3-4be9-84bc-3a39ddcd41d5)
+# Slide-Level vs. Patch-Level Encoding for Automated Pathology Report Generation: A Systematic Evaluation![F1](https://github.com/user-attachments/assets/b7155d30-f7a3-4be9-84bc-3a39ddcd41d5)
 ## Aim of the Project
-This project systematically compares patch-level and slide-level encoding paradigms
-for diagnostic report generation in computational pathology. We evaluate four configurations
-on the REG2025 dataset containing 8,352 WSI and report pairs spanning seven organ
-types with standardized CAP protocol reports. We use the Histgen codebase aa baseline and improve it further. We aim to answer the following research questions -
+This project presents a systematic evaluation of whether automated report generation benefits more from **learned patch-level aggregation** using enhanced patch-level foundation models, or from **frozen slide-level encoding**, on the REG2025 dataset. We use [HistGen](https://github.com/dddavid4real/HistGen/tree/main) as the baseline — a multiple instance learning (MIL) framework with hierarchical feature aggregation for report generation. We replace its feature extractor with modern patch-level foundation models (UNI, UNI2, CONCH). We then replace HistGen's encoder and cross-modal context module entirely with TITAN, a frozen pretrained slide-level foundation model, training only the decoder.
 
-RQ1: Does slide-level feature encoding with pretrained aggregation outperform
-patch-level encoding with learned hierarchical aggregation for generating pathology
-reports from WSIs?
+## Key Contributions
+This project systematically compares patch-level and slide-level encoding paradigms for diagnostic report generation in computational pathology. We evaluate five configurations on the REG2025 dataset (8,352 WSI-report pairs spanning seven organ types with standardized CAP protocol reports), using HistGen as the baseline framework.
 
-RQ2: How does the scale of foundation model pretraining (model capacity and corpus
-size) affect downstream report generation performance?
-
-RQ3: Does a multimodal vision-language foundation model with slide-level encoding
-outperform vision-only patch-level foundation models for automated report generation?
-
-RQ4: What architectural and optimization adaptations are required when fine tuning
-HistGen framework on frozen pretrained foundation model used as feature extractor?
+1. **Slide-level encoding wins**: TITAN (frozen slide-level foundation model) yields statistically significant improvements in ROUGE-L and REG Score over the HistGen baseline and over HistGen pipelines using UNI and CONCH as feature extractors, while also reducing training time by 25%.
+2. **The gain isn't just CONCH features**: TITAN's slide embeddings are built on CONCH's patch features, but TITAN still outperforms CONCH directly — isolating the benefit to slide-level encoding itself, not the underlying patch representation.
+3. **Scale helps at the patch level too**: Increasing both model capacity and pretraining corpus size (UNI2 vs. UNI) improves patch-level performance, suggesting encoder scaling is beneficial even within the patch-aggregation paradigm.
 
 
 <img width="729" height="909" alt="Flowchart (1)" src="https://github.com/user-attachments/assets/4a00c638-7b81-474d-a771-9453dde72c2d" />
