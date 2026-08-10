@@ -1,4 +1,4 @@
-# Vision-Language Models for Pathology Report Generation from Gigapixel Whole-Slide Images![F1](https://github.com/user-attachments/assets/b7155d30-f7a3-4be9-84bc-3a39ddcd41d5)
+# Slide-Level vs. Patch-Level Encoding for Automated Pathology Report Generation: A Systematic Evaluation![F1](https://github.com/user-attachments/assets/b7155d30-f7a3-4be9-84bc-3a39ddcd41d5)
 ## Aim of the Project
 This project systematically compares patch-level and slide-level encoding paradigms
 for diagnostic report generation in computational pathology. We evaluate four configurations
