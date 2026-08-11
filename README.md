@@ -60,17 +60,17 @@ This project systematically compares patch-level and slide-level encoding paradi
 
 2. Training
    
-   To train Histgen baseline and other patch level encoder variants (UNI and UNI2) use the files [HistGen Training](/HistGen/train_wsi_reportseed4x.sh), [UNI Training](/HistGen/train_wsi_report_uni1_seed4x.sh), and [UNI2 Training](/HistGen/train_wsi_report_uni2_seed4x.sh) respectively using the [histgen](/Conda%20Environments/histgen.yml) environment.
+   To train Histgen baseline and other patch level encoder variants (UNI, UNI2 and CONCH) use the files [HistGen Training](/HistGen/train_wsi_reportseed4x.sh), [UNI Training](/HistGen/train_wsi_report_uni1_seed4x.sh), [UNI2 Training](/HistGen/train_wsi_report_uni2_seed4x.sh) and [CONCH](HistGen/train_wsi_report_conch_histgen_seed42.sh) respectively using the [histgen](/Conda%20Environments/histgen.yml) environment.
 
    To train TITAN, use [TITAN Training](/HistGen4TITAN/train_wsi_report_TITAN.sh) using [histgen_titan](/Conda%20Environments/histgen_titan.yml) environment.
 
 4. Inference
 
-   For BLUE, METEOR, ROUGE-L, use the files [HistGen Testing](/HistGen/test_wsi_report_seed4x.sh), [UNI Testing](/HistGen/test_wsi_report_UNI1_seed4x.sh) [UNI2 Testing](/HistGen/test_wsi_report_UNI2_1_seed4x.sh) with [histgen](/Conda%20Environments/histgen.yml) environment. For TITAN use [TITAN Testing](/HistGen4TITAN/test_wsi_report_5_seed4x.sh) with [histgen_titan](/Conda%20Environments/histgen_titan.yml) environment.
+   For BLUE, METEOR, ROUGE-L, use the files [HistGen Testing](/HistGen/test_wsi_report_seed4x.sh), [UNI Testing](/HistGen/test_wsi_report_UNI1_seed4x.sh), [UNI2 Testing](/HistGen/test_wsi_report_UNI2_1_seed4x.sh) and [CONCH Testing](/HistGen/test_wsi_report_conch_seed4x.sh) with [histgen](/Conda%20Environments/histgen.yml) environment. For TITAN use [TITAN Testing](/HistGen4TITAN/test_wsi_report_5_seed4x.sh) with [histgen_titan](/Conda%20Environments/histgen_titan.yml) environment.
 
    For REGScore use the file [HistGen Testing](/Other%20Activities/REG2025%20Inference/reg_evaluator.py) with [reg2025-eval](/Conda%20Environments/reg2025-eval.yml) environmet for all the models.
 
-Sample job scripts are present in [Scripts](/Job%20Scripts/)
+Sample job scripts are present in [Scripts](/job_scripts/)
 
-All the results can be found in [Results](/Results/)
+All the results can be found in [Results](/results/)
 
