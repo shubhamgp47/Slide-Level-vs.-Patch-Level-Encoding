@@ -54,21 +54,21 @@ This project systematically compares patch-level and slide-level encoding paradi
    
    For segnmentation use [CLAM patching script](/HistGen/CLAM/patching_scripts/tcga-wsi-report.sh) using the [clam](/Conda%20Environments/clam.yml) environment.
    
-   For feature extraction using HistGen feature extractor, Uni or Uni2 use the respective files in [Feature extraction](/HistGen/CLAM/extract_scripts) using [clam](/Conda%20Environments/clam.yml) environment. For CONCHv1.5 use the [Feature extraction](/HistGen4TITAN/CONCH%20CLAM/extract_features_calling_script.sh) and post process the features with [Postprocessing for CONCHv1.5](/HistGen4TITAN/CONCH%20CLAM/PostProcess%20CONCH%20Features/postprocess_featues.ipynb) using [clam_conch](/Conda%20Environments/clam_conch.yml) environment.
+   For feature extraction using HistGen feature extractor, UNI or UNI2 use the respective [scripts](/HistGen/CLAM/extract_scripts) using [clam](/Conda%20Environments/clam.yml) environment. For CONCH use this [script](/HistGen4TITAN/CONCH%20CLAM/extract_features_calling_script.sh) and post process the features with the postprocessing [script](/HistGen4TITAN/CONCH%20CLAM/PostProcess%20CONCH%20Features/postprocess_featues.ipynb) using [clam_conch](/Conda%20Environments/clam_conch.yml) environment.
    
-   To create slide embeddings ftom TITAN use [TITAN Slide Embeddings](/HistGen4TITAN/extractSlideEmbeddings.py) using [histgen_titan](/Conda%20Environments/histgen_titan.yml) environment.
+   To create slide embeddings ftom TITAN use the [TITAN slide embeddings script](/HistGen4TITAN/extractSlideEmbeddings.py) using [histgen_titan](/Conda%20Environments/histgen_titan.yml) environment.
 
 2. Training
    
-   To train Histgen baseline and other patch level encoder variants (UNI, UNI2 and CONCH) use the files [HistGen Training](/HistGen/train_wsi_reportseed4x.sh), [UNI Training](/HistGen/train_wsi_report_uni1_seed4x.sh), [UNI2 Training](/HistGen/train_wsi_report_uni2_seed4x.sh) and [CONCH](HistGen/train_wsi_report_conch_histgen_seed42.sh) respectively using the [histgen](/Conda%20Environments/histgen.yml) environment.
+   To train Histgen baseline and other patch level encoder variants (UNI, UNI2 and CONCH) use the [HistGen training](/HistGen/train_wsi_reportseed4x.sh), [UNI training](/HistGen/train_wsi_report_uni1_seed4x.sh), [UNI2 training](/HistGen/train_wsi_report_uni2_seed4x.sh) and [CONCH training](HistGen/train_wsi_report_conch_histgen_seed42.sh) scripts respectively using the [histgen](/Conda%20Environments/histgen.yml) environment.
 
-   To train TITAN, use [TITAN Training](/HistGen4TITAN/train_wsi_report_TITAN.sh) using [histgen_titan](/Conda%20Environments/histgen_titan.yml) environment.
+   To train TITAN, use [TITAN training](/HistGen4TITAN/train_wsi_report_TITAN.sh) script using [histgen_titan](/Conda%20Environments/histgen_titan.yml) environment.
 
 4. Inference
 
-   For BLUE, METEOR, ROUGE-L, use the files [HistGen Testing](/HistGen/test_wsi_report_seed4x.sh), [UNI Testing](/HistGen/test_wsi_report_UNI1_seed4x.sh), [UNI2 Testing](/HistGen/test_wsi_report_UNI2_1_seed4x.sh) and [CONCH Testing](/HistGen/test_wsi_report_conch_seed4x.sh) with [histgen](/Conda%20Environments/histgen.yml) environment. For TITAN use [TITAN Testing](/HistGen4TITAN/test_wsi_report_5_seed4x.sh) with [histgen_titan](/Conda%20Environments/histgen_titan.yml) environment.
+   For BLUE, METEOR, ROUGE-L, use the [HistGen testing](/HistGen/test_wsi_report_seed4x.sh), [UNI testing](/HistGen/test_wsi_report_UNI1_seed4x.sh), [UNI2 testing](/HistGen/test_wsi_report_UNI2_1_seed4x.sh) and [CONCH testing](/HistGen/test_wsi_report_conch_seed4x.sh) scripts respectively with [histgen](/Conda%20Environments/histgen.yml) environment. For TITAN use [TITAN testing](/HistGen4TITAN/test_wsi_report_5_seed4x.sh) script with [histgen_titan](/Conda%20Environments/histgen_titan.yml) environment.
 
-   For REGScore use the file [HistGen Testing](/Other%20Activities/REG2025%20Inference/reg_evaluator.py) with [reg2025-eval](/Conda%20Environments/reg2025-eval.yml) environmet for all the models.
+   For REGScore use the script [HistGen testing](/Other%20Activities/REG2025%20Inference/reg_evaluator.py) with [reg2025-eval](/Conda%20Environments/reg2025-eval.yml) environmet for all the models.
 
 Sample job scripts are present in [Scripts](/job_scripts/)
 
