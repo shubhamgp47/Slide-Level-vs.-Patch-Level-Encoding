@@ -89,6 +89,7 @@ If you use this repository, please also consider citing the original HistGen pap
 }
 ```
 This repository also integrates the following pretrained encoders, each subject to its own license and access conditions on the Hugging Face Hub:
+
 - [HistGen](https://huggingface.co/datasets/david4real/HistGen)
   
 – [UNI](https://huggingface.co/MahmoodLab/UNI)
