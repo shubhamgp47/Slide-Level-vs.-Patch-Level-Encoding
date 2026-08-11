@@ -78,6 +78,7 @@ All the results can be found in [Results](/results/)
 This codebase builds on HistGen (Guo et al., MICCAI 2024), used under the Apache License 2.0. Portions of the original HistGen code have been modified and extended to integrate additional patch- and slide-level encoders (UNI, UNI2, CONCH, TITAN) and to adapt the training and evaluation pipeline for this study. A copy of the Apache License 2.0 is included in this repository (see LICENSE).
 
 If you use this repository, please also consider citing the original HistGen paper:
+```bibtex
 @inproceedings{guo2024histgen,
   title={Histgen: Histopathology report generation via local-global feature encoding and cross-modal context interaction},
   author={Guo, Zhengrui and Ma, Jiabo and Xu, Yingxue and Wang, Yihui and Wang, Liansheng and Chen, Hao},
@@ -86,3 +87,10 @@ If you use this repository, please also consider citing the original HistGen pap
   year={2024},
   organization={Springer}
 }
+```
+This repository also integrates the following pretrained encoders, each subject to its own license and access conditions on the Hugging Face Hub:
+- [HistGen](https://huggingface.co/datasets/david4real/HistGen)
+– [UNI](https://huggingface.co/MahmoodLab/UNI)
+– [UNI2](https://huggingface.co/MahmoodLab/UNI2-h)
+– [CONCH](https://huggingface.co/MahmoodLab/CONCH)
+– [TITAN](https://huggingface.co/MahmoodLab/TITAN)
