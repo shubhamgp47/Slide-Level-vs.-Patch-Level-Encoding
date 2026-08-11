@@ -19,9 +19,9 @@ This project systematically compares patch-level and slide-level encoding paradi
 ![Mean performance of all models](results/grouped_dot_plots/all_models_overview_grouped_dot.png)
 *Mean performance of all models across four evaluation metrics. Each point shows the average BLEU-4, METEOR, ROUGE-L, and REG Score on the test set for HistGen (ViT-L), UNI, CONCH, UNI2, and TITAN, with vertical error bars indicating one standard deviation across five runs.*
 
-## Statistical Significance vs HistGen Baseline 
+## Statistical Analysis
 
-### Table 1: Statistical Analysis vs. HistGen Baseline
+### Table 1: Statistical Analysis of all models vs. HistGen Baseline
 
 *Statistical analysis of models against HistGen baseline (differences computed as model − HistGen baseline). The 95% CI reports bootstrap confidence intervals for the difference in REG Score. Asterisks (\*) indicate statistically significant improvements over HistGen. **Bold** values denote large effect sizes (Cohen's d > 0.8) relative to HistGen.*
 
