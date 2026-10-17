@@ -63,7 +63,7 @@ All models were evaluated over 5 random seeds (reported as Mean ± SD). 95% Conf
 > - Because TITAN constructs slide-level embeddings directly on top of CONCH patch representations, its clear statistical gain over CONCH demonstrates the explicit benefit of frozen slide-level aggregation compared to patch-level sequence modeling.
 
 ### Anatomical-Level Performance
-![Anatomical-level REG Score](other_activities/anatomical_level_work/organ_level_metrics/metrics_plots/reg_grouped_bars.png)
+![Anatomical-level REG Score](analysis/anatomical_analysis/organ_level_metrics/metrics_plots/reg_grouped_bars.png)
 *Anatomical-level REG Score for all models. Bars show mean REG Score on the test set for HistGen (ViT-L), UNI, CONCH, UNI2, and TITAN, computed overall and separately for each organ. TITAN consistently outperforms other models on the more difficult organs (colon, rectum, lung, stomach), while all models perform similarly on organs with larger, longer-report datasets (breast, prostate).*
 
 
