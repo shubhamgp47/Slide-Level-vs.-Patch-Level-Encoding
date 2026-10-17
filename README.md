@@ -17,7 +17,7 @@ This project systematically compares patch-level and slide-level encoding paradi
 ## Results
 
 
-![Mean performance of all models](results/grouped_dot_plots/all_models_overview_grouped_dot.png)
+![Mean performance of all models](results/dot_plots/all_models_overview_grouped_dot.png)
 *Mean performance of all models across four evaluation metrics. Each point shows the average BLEU-4, METEOR, ROUGE-L, and REG Score on the test set for HistGen (ViT-L), UNI, CONCH, UNI2, and TITAN, with vertical error bars indicating one standard deviation across five runs.*
 
 ## Statistical Analysis & Benchmarking
