@@ -1,5 +1,5 @@
 # Slide-Level vs. Patch-Level Encoding for Automated Pathology Report Generation: A Systematic Evaluation
-![F1](assets/Workflow_updated.PNG)
+![F1](assets/Workflow_updated.png)
 ## Aim of the Project
 This project presents a systematic evaluation of whether automated report generation benefits more from **learned patch-level aggregation** using enhanced patch-level foundation models, or from **frozen slide-level encoding**, on the REG2025 dataset. We use [HistGen](https://github.com/dddavid4real/HistGen/tree/main) as the baseline — a multiple instance learning (MIL) framework with hierarchical feature aggregation for report generation. We replace its feature extractor with modern patch-level foundation models (UNI, UNI2, CONCH). We then replace HistGen's encoder and cross-modal context module entirely with TITAN, a frozen pretrained slide-level foundation model, training only the decoder. For a detailed flowchart, see [this](assets/detailed_workflow.png).
 
