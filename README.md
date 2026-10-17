@@ -66,6 +66,24 @@ All models were evaluated over 5 random seeds (reported as Mean ± SD). 95% Conf
 ![Anatomical-level REG Score](analysis/anatomical_analysis/organ_level_metrics/metrics_plots/reg_grouped_bars.png)
 *Anatomical-level REG Score for all models. Bars show mean REG Score on the test set for HistGen (ViT-L), UNI, CONCH, UNI2, and TITAN, computed overall and separately for each organ. TITAN consistently outperforms other models on the more difficult organs (colon, rectum, lung, stomach), while all models perform similarly on organs with larger, longer-report datasets (breast, prostate).*
 
+### Qualitative Evaluation: Generated Reports vs. Ground Truth
+
+> **Legend:** 
+> - <kbd style="background-color: #d1fae5; color: #065f46;">Green</kbd> (`<ins>`): Matches ground truth exactly.
+> - <kbd style="background-color: #fee2e2; color: #991b1b;">Red</kbd> (`<del>`): Incorrect, hallucinated, misordered, or mismatched clinical content.
+
+| Category | Ground Truth Report | Generated Report (TITAN) |
+| :--- | :--- | :--- |
+| **Perfect Matches** | Breast, core-needle biopsy; Invasive carcinoma of no special type, grade II (Tubule formation: 3, Nuclear grade: 2, Mitoses: 1). | <ins>Breast, core-needle biopsy; Invasive carcinoma of no special type, grade II (Tubule formation: 3, Nuclear grade: 2, Mitoses: 1).</ins> |
+| | Uterine cervix, colposcopic biopsy; Low-grade squamous intraepithelial lesion (LSIL; CIN 1). | <ins>Uterine cervix, colposcopic biopsy; Low-grade squamous intraepithelial lesion (LSIL; CIN 1).</ins> |
+| | Prostate, biopsy; Acinar adenocarcinoma, Gleason's score 6 (3+3), grade group 1, tumor volume: 5%. | <ins>Prostate, biopsy; Acinar adenocarcinoma, Gleason's score 6 (3+3), grade group 1, tumor volume: 5%.</ins> |
+| **Minor Deviations** | Breast, core-needle biopsy; Invasive carcinoma of no special type, grade I (Tubule formation: 2, Nuclear grade: 2, Mitoses: 1). | <del>biopsy; Breast,</del> <ins>core-needle biopsy; Invasive carcinoma of no special type, grade I (Tubule formation: 2, Nuclear grade: 2, Mitoses: 1).</ins> |
+| | Uterine cervix, punch biopsy; High-grade squamous intraepithelial lesion (HSIL; CIN 2). | <ins>Uterine cervix,</ins> <del>colposcopic biopsy;</del> <ins>High-grade squamous intraepithelial lesion (HSIL;</ins> <del>CIN 3).</del> |
+| | Prostate, biopsy; Acinar adenocarcinoma, Gleason's score 7 (3+4), grade group 2 (Gleason pattern 4: 10%), tumor volume: 50%. | <ins>Prostate, biopsy; Acinar adenocarcinoma, Gleason's score 7 (3+4), grade group 2 (Gleason pattern 4: 10%),</ins> <del>tumor volume: 90%.</del> |
+| **More Severe Errors** | Breast, sono-guided core biopsy; 1. Invasive lobular carcinoma 2. Lobular carcinoma in situ 3. Microcalcification. | <ins>Breast, sono-guided core biopsy;</ins> <del>Invasive carcinoma of no special type, grade II (Tubule formation: 3, Nuclear grade: 2, Mitoses: 1).</del> |
+| | Uterine cervix, colposcopic biopsy; Invasive squamous cell carcinoma. | <ins>Uterine cervix, colposcopic biopsy;</ins> <del>High-grade squamous intraepithelial lesion (HSIL; CIN 3).</del> |
+| | Prostate, biopsy; Acinar adenocarcinoma, Gleason's score 6 (3+3), grade group 1, tumor volume: 3%. | <del>biopsy;</del> <ins>Prostate, biopsy;</ins> <del>No tumor present.</del> |
+
 
 ## Usage
 1. Preprocessing
