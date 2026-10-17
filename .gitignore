@@ -6,3 +6,5 @@ Ignore the following extensions
 *.tif
 *.h5
 *.pkl
+
+/untracked
